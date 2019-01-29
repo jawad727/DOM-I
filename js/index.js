@@ -40,3 +40,76 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let navs = document.querySelectorAll('header nav a');
+
+navs[0].innerText = siteContent['nav']['nav-item-1'];
+navs[1].innerText = siteContent['nav']['nav-item-2'];
+navs[2].innerText = siteContent['nav']['nav-item-3'];
+navs[3].innerText = siteContent['nav']['nav-item-4'];
+navs[4].innerText = siteContent['nav']['nav-item-5'];
+navs[5].innerText = siteContent['nav']['nav-item-6'];
+
+//nav.appendChild();
+
+navs.forEach(function(item){
+  item.style.color = 'red';
+})
+
+let navmain = document.querySelector('nav')
+let newnav = document.createElement('a');
+newnav.innerText = 'Last';
+newnav.href = "#";
+navmain.appendChild(newnav);
+
+let newnav2 = document.createElement('a');
+newnav2.innerText = 'First';
+newnav2.href = "#";
+navmain.prepend(newnav2);
+
+newnav.style.color = 'red';
+newnav2.style.color = 'red';
+
+
+let subtitles = document.querySelectorAll('div h4');
+
+subtitles[0].innerText = siteContent["main-content"]["features-h4"];
+subtitles[1].innerText = siteContent["main-content"]["about-h4"];
+subtitles[2].innerText = siteContent["main-content"]["services-h4"];
+subtitles[3].innerText = siteContent["main-content"]["product-h4"];
+subtitles[4].innerText = siteContent["main-content"]["vision-h4"];
+subtitles[5].innerText = siteContent["contact"]["contact-h4"];
+
+let h1 = document.querySelector('section div h1');
+
+h1.innerText = siteContent["cta"]["h1"];
+
+let button = document.querySelector('button');
+
+button.innerText = siteContent["cta"]["button"];
+
+let ptags = document.querySelectorAll('p');
+
+ptags[0].innerText = siteContent["main-content"]["features-content"];
+ptags[1].innerText = siteContent["main-content"]["about-content"];
+ptags[2].innerText = siteContent["main-content"]["services-content"];
+ptags[3].innerText = siteContent["main-content"]["product-content"];
+ptags[4].innerText = siteContent["main-content"]["vision-content"];
+ptags[5].innerText = siteContent["contact"]["address"];
+ptags[6].innerText = siteContent["contact"]["phone"];
+ptags[7].innerText = siteContent["contact"]["email"];
+ptags[8].innerText = siteContent["footer"]["copyright"];
+
+let CTA = document.getElementById("cta-img");
+
+CTA.setAttribute('src', siteContent["cta"]["img-src"])
+
+let MidIMG = document.getElementById("middle-img");
+
+MidIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+
+
