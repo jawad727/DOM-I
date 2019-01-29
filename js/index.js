@@ -44,42 +44,62 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navs = document.querySelectorAll('header nav a');
 
-navs[0].textContent = 'Services';
-navs[1].textContent = 'Product';
-navs[2].textContent = 'Vision';
-navs[3].textContent = 'Features';
-navs[4].textContent = 'About';
-navs[5].textContent = 'Contact';
+navs[0].innerText = siteContent['nav']['nav-item-1'];
+navs[1].innerText = siteContent['nav']['nav-item-2'];
+navs[2].innerText = siteContent['nav']['nav-item-3'];
+navs[3].innerText = siteContent['nav']['nav-item-4'];
+navs[4].innerText = siteContent['nav']['nav-item-5'];
+navs[5].innerText = siteContent['nav']['nav-item-6'];
+
+//nav.appendChild();
+
+navs.forEach(function(item){
+  item.style.color = 'red';
+})
+
+let navmain = document.querySelector('nav')
+let newnav = document.createElement('a');
+newnav.innerText = 'Last';
+newnav.href = "#";
+navmain.appendChild(newnav);
+
+let newnav2 = document.createElement('a');
+newnav2.innerText = 'First';
+newnav2.href = "#";
+navmain.prepend(newnav2);
+
+newnav.style.color = 'red';
+newnav2.style.color = 'red';
 
 
 let subtitles = document.querySelectorAll('div h4');
 
-subtitles[0].textContent = 'Features';
-subtitles[1].textContent = 'About';
-subtitles[2].textContent = 'Services';
-subtitles[3].textContent = 'Product';
-subtitles[4].textContent = 'Vision';
-subtitles[5].textContent = 'Contact';
+subtitles[0].innerText = siteContent["main-content"]["features-h4"];
+subtitles[1].innerText = siteContent["main-content"]["about-h4"];
+subtitles[2].innerText = siteContent["main-content"]["services-h4"];
+subtitles[3].innerText = siteContent["main-content"]["product-h4"];
+subtitles[4].innerText = siteContent["main-content"]["vision-h4"];
+subtitles[5].innerText = siteContent["contact"]["contact-h4"];
 
 let h1 = document.querySelector('section div h1');
 
-h1.textContent = 'DOM Is Awesome';
+h1.innerText = siteContent["cta"]["h1"];
 
 let button = document.querySelector('button');
 
-button.textContent = 'Get Started';
+button.innerText = siteContent["cta"]["button"];
 
 let ptags = document.querySelectorAll('p');
 
-ptags[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-ptags[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-ptags[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-ptags[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-ptags[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-ptags[5].textContent = '123 Way 456 Street Somewhere, USA';
-ptags[6].textContent = '1 (888) 888-8888';
-ptags[7].textContent = 'sales@greatidea.io';
-ptags[8].textContent = 'Copyright Great Idea! 2018';
+ptags[0].innerText = siteContent["main-content"]["features-content"];
+ptags[1].innerText = siteContent["main-content"]["about-content"];
+ptags[2].innerText = siteContent["main-content"]["services-content"];
+ptags[3].innerText = siteContent["main-content"]["product-content"];
+ptags[4].innerText = siteContent["main-content"]["vision-content"];
+ptags[5].innerText = siteContent["contact"]["address"];
+ptags[6].innerText = siteContent["contact"]["phone"];
+ptags[7].innerText = siteContent["contact"]["email"];
+ptags[8].innerText = siteContent["footer"]["copyright"];
 
 let CTA = document.getElementById("cta-img");
 
