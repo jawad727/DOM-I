@@ -81,4 +81,15 @@ ptags[6].textContent = '1 (888) 888-8888';
 ptags[7].textContent = 'sales@greatidea.io';
 ptags[8].textContent = 'Copyright Great Idea! 2018';
 
+let CTA = document.getElementById("cta-img");
+
+CTA.setAttribute('src', siteContent["cta"]["img-src"])
+
+let MidIMG = document.getElementById("middle-img");
+
+MidIMG.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+
 
